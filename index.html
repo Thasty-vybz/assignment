@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Houses by Thastyvybz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOGIN PAGE -->
+  <div id="loginPage" class="login-container">
+    <h1>Houses by Thastyvybz</h1>
+    <h2>Welcome Back!</h2>
+    <p>Log in to find your perfect affordable home near the University of Embu.</p>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+      <p class="error-message" id="errorMessage"></p>
+    </form>
+  </div>
+
+  <!-- MAIN SITE (HIDDEN UNTIL LOGIN) -->
+  <div id="mainSite" style="display: none;">
+
+    <header>
+      <h1>Houses by Thastyvybz</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#search">Search</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Slideshow -->
+    <section class="slideshow" id="home">
+      <div class="slides fade">
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7" alt="House 1">
+      </div>
+      <div class="slides fade">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="House 2">
+      </div>
+      <div class="slides fade">
+        <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="House 3">
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We provide affordable and quality housing options for students and residents around the University of Embu. Explore houses that fit your budget and comfort with Houses by Thastyvybz.</p>
+    </section>
+
+    <!-- Search Section -->
+    <section id="search">
+      <h2>Search for Houses</h2>
+      <input type="text" id="searchInput" placeholder="Search by location or price...">
+      <div id="house-list" class="house-list">
+
+        <div class="house" data-name="Sunrise Apartments" data-location="Embu Town" data-price="8000">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Sunrise Apartments">
+          <h3>Sunrise Apartments</h3>
+          <p>Located in Embu Town, starting from Ksh 8,000/month.</p>
+          <button class="details-btn">View Details</button>
+        </div>
+
+        <div class="house" data-name="Green Villa" data-location="Dallas" data-price="9500">
+          <img src="https://images.unsplash.com/photo-1600585154084-2d1e1c8d8b0d" alt="Green Villa">
+          <h3>Green Villa</h3>
+          <p>Modern 2-bedroom near University of Embu, from Ksh 9,500/month.</p>
+          <button class="details-btn">View Details</button>
+        </div>
+
+        <div class="house" data-name="Student Haven" data-location="Blue Valley" data-price="7000">
+          <img src="https://images.unsplash.com/photo-1572120360610-d971b9b78825" alt="Student Haven">
+          <h3>Student Haven</h3>
+          <p>Perfect for students, budget-friendly at Ksh 7,000/month.</p>
+          <button class="details-btn">View Details</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- House Details Modal -->
+    <div id="detailsModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="houseTitle"></h2>
+        <p id="houseDescription"></p>
+        <button id="submitBtn">Submit Interest</button>
+        <button id="exitBtn">Exit</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Houses by Thastyvybz | Affordable Living Near University of Embu</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
